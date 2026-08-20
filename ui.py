@@ -13,11 +13,11 @@ def CreateAppWindow(title, width_size, height_size, fg_color, favicon):
     root.resizable(False, False)
     root.iconbitmap(favicon)
 
-def AddCreditsToTheWindow(window, name, role, fg_color, text_color):
+def AddCreditsToTheWindow(window, name, role, name2, role2, fg_color, text_color):
     global Credits
     Credits = CTkLabel(
         window,
-        text=f"Credits : {name} {role}",
+        text=f"Credits : {name} {role}\n Credits : {name2} {role2}",
         fg_color=fg_color,
         text_color=text_color,
     )
