@@ -23,7 +23,7 @@ def AddCreditsToTheWindow(window, name, role, fg_color, text_color):
     )
     Credits.pack(side="bottom")
 
-def AddMainTextToTheWindow(window, text_content, fg_color, text_color, font, TextSide):
+def AddMainTextToTheWindow(window, text_content, fg_color, text_color, font):
     global MainText
     MainText = CTkLabel(
         window,
@@ -37,7 +37,7 @@ def AddMainTextToTheWindow(window, text_content, fg_color, text_color, font, Tex
         border_width = 1.5,
         border_color="red",
     )
-    MainText.pack(side=TextSide)
+    MainText.pack(side="top")
 
 def AddTimerTextToTheWindow(window, fg_color, text_color, font):
     global Timer
@@ -46,9 +46,94 @@ def AddTimerTextToTheWindow(window, fg_color, text_color, font):
         text="25:00",
         fg_color=fg_color,
         text_color=text_color,
-        font=(font, 90)
+        font=(font, 90),
+        width=150,
+        height=230,
     )
-    Timer.place(relx=0.5, rely=0.5, anchor="center")
+    Timer.pack()
+
+def AddButtonsContainersToTheWindow(window, fg_color):
+    global ButtonsContainer1, ButtonsContainer2
+    ButtonsContainer1 = CTkFrame(window, fg_color=fg_color)
+    ButtonsContainer1.pack(pady=5)
+
+    ButtonsContainer2 = CTkFrame(window, fg_color=fg_color)
+    ButtonsContainer2.pack(pady=5)
+
+def AddSetWorkTimerButtonToTheWindow(window, fg_color, text_color, font, button_command):
+    global SetWorkTimerButton
+    SetWorkTimerButton = CTkButton(
+        ButtonsContainer1,
+        text="Set To Work Time",
+        fg_color=fg_color,
+        text_color=text_color,
+        font=(font, 20),
+        corner_radius=10,
+        border_width=1.5,
+        border_color="red",
+        command=button_command
+    )
+    SetWorkTimerButton.pack(side="left")
+
+def AddSetBreakTimerButtonToTheWindow(window, fg_color, text_color, font, button_command):
+    global SetBreakTimerButton
+    SetBreakTimerButton = CTkButton(
+        ButtonsContainer1,
+        text="Set To Break Time",
+        fg_color=fg_color,
+        text_color=text_color,
+        font=(font, 20),
+        corner_radius=10,
+        border_width=1.5,
+        border_color="red",
+        command=button_command
+    )
+    SetBreakTimerButton.pack(side="left")
+
+def AddSetFourthBreakTimerButtonToTheWindow(window, fg_color, text_color, font, button_command):
+    global SetFourthBreakTimerButton
+    SetFourthBreakTimerButton = CTkButton(
+        ButtonsContainer1,
+        text="Set To Break Four Time",
+        fg_color=fg_color,
+        text_color=text_color,
+        font=(font, 20),
+        corner_radius=10,
+        border_width=1.5,
+        border_color="red",
+        command=button_command
+    )
+    SetFourthBreakTimerButton.pack(side="left")
+
+def AddStartTimerButton(window, fg_color, text_color, font, button_command):
+    global StartTimerButton
+    StartTimerButton = CTkButton(
+        ButtonsContainer2,
+        text="Start Timer",
+        fg_color=fg_color,
+        text_color=text_color,
+        font=(font, 20),
+        corner_radius=10,
+        border_width=1.5,
+        border_color="red",
+        command=button_command
+    )
+    StartTimerButton.pack(side="left", padx=5)
+
+def AddStopTimerButton(window, fg_color, text_color, font, button_command):
+    global StopTimerButton
+    StopTimerButton = CTkButton(
+        ButtonsContainer2,
+        text="Stop Timer",
+        fg_color=fg_color,
+        text_color=text_color,
+        font=(font, 20),
+        corner_radius=10,
+        border_width=1.5,
+        border_color="red",
+        command=button_command
+    )
+    StopTimerButton.pack(side="left", padx=5)
 
 def RunTheAppRootWindow(root):
     root.mainloop()
