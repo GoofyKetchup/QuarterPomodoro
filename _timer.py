@@ -20,7 +20,7 @@ def SetTimerOnWorkTime(timer):
 
 def SetTimerOnBreakTime(timer):
     if not timer_states["running"]:
-        timer_states["remaining_seconds"] = 10
+        timer_states["remaining_seconds"] = 5 * 60
         timer.configure(text="05:00")
 
 def SetTimerOnFourthBreakTime(timer):
