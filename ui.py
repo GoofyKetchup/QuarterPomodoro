@@ -105,7 +105,7 @@ def AddSetFourthBreakTimerButtonToTheWindow(window, fg_color, text_color, font, 
     )
     SetFourthBreakTimerButton.pack(side="left")
 
-def AddStartTimerButton(window, fg_color, text_color, font, button_command):
+def AddStartTimerButtonToTheWindow(window, fg_color, text_color, font, button_command):
     global StartTimerButton
     StartTimerButton = CTkButton(
         ButtonsContainer2,
@@ -120,7 +120,7 @@ def AddStartTimerButton(window, fg_color, text_color, font, button_command):
     )
     StartTimerButton.pack(side="left", padx=5)
 
-def AddStopTimerButton(window, fg_color, text_color, font, button_command):
+def AddStopTimerButtonToTheWindow(window, fg_color, text_color, font, button_command):
     global StopTimerButton
     StopTimerButton = CTkButton(
         ButtonsContainer2,
@@ -134,6 +134,21 @@ def AddStopTimerButton(window, fg_color, text_color, font, button_command):
         command=button_command
     )
     StopTimerButton.pack(side="left", padx=5)
+
+def AddStopRingtoneButtonToTheWindow(window, fg_color, text_color, font, button_command):
+    global StopRingtoneButton
+    StopRingtoneButton = CTkButton(
+        ButtonsContainer2,
+        text="Stop Ringtone",
+        fg_color=fg_color,
+        text_color=text_color,
+        font=(font, 20),
+        corner_radius=10,
+        border_width=1.5,
+        border_color="red",
+        command=button_command,
+    )
+    StopRingtoneButton.pack(side="left", padx=5)
 
 def RunTheAppRootWindow(root):
     root.mainloop()

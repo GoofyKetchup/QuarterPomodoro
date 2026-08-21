@@ -21,8 +21,10 @@ ui.AddSetBreakTimerButtonToTheWindow(ui.root, "#000000", "#FFFFFF", "Arial", lam
 
 ui.AddSetFourthBreakTimerButtonToTheWindow(ui.root, "#000000", "#FFFFFF", "Arial", lambda: _timer.SetTimerOnFourthBreakTime(ui.Timer))
 
-ui.AddStartTimerButton(ui.root, "#000000", "#FFFFFF", "Arial", lambda: _timer.StartTimer(ui.Timer))
+ui.AddStartTimerButtonToTheWindow(ui.root, "#000000", "#FFFFFF", "Arial", lambda: _timer.StartTimer(ui.Timer))
 
-ui.AddStopTimerButton(ui.root, "#000000", "#FFFFFF", "Arial", lambda: _timer.StopTimer(ui.Timer))
+ui.AddStopTimerButtonToTheWindow(ui.root, "#000000", "#FFFFFF", "Arial", lambda: _timer.StopTimer(ui.Timer))
+
+ui.AddStopRingtoneButtonToTheWindow(ui.root, "#000000", "#FFFFFF", "Arial", lambda: _timer.StopRingtone())
 
 ui.RunTheAppRootWindow(ui.root)

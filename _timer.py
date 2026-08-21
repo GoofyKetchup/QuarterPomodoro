@@ -20,7 +20,7 @@ def SetTimerOnWorkTime(timer):
 
 def SetTimerOnBreakTime(timer):
     if not timer_states["running"]:
-        timer_states["remaining_seconds"] = 5 * 60
+        timer_states["remaining_seconds"] = 10
         timer.configure(text="05:00")
 
 def SetTimerOnFourthBreakTime(timer):
@@ -51,3 +51,6 @@ def StopTimer(timer):
             timer.after_cancel(timer_states["after_id"])
             timer_states["after_id"] = None
         _update_timer_display(timer)
+
+def StopRingtone():
+    pygame.mixer.music.stop()
