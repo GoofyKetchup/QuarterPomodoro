@@ -1,6 +1,6 @@
 # QuarterPomodoro
 
-![icon](https://github.com/GoofyKetchup/QuarterPomodoro/edit/main/QuarterPomodoroIcon.ico)
+![icon](https://github.com/GoofyKetchup/QuarterPomodoro/edit/main/QuarterPomodoroIcon.png)
 
 Have ever heard of the Pomodoro method?
 
