@@ -1,5 +1,7 @@
 # QuarterPomodoro
 
+![icon](https://github.com/GoofyKetchup/QuarterPomodoro/blob/main/QuarterPomodoroIcon.ico)
+
 Have ever heard of the Pomodoro method?
 
 It's easy.
@@ -8,7 +10,7 @@ Work 25 minutes, take a 5 minutes break. Work 25 minutes, again and again. until
 
 So we made this app to help you use this method.
 
-# Don't like the rington?
+# Don't like the ringtone?
 
 You can change the file timer_finished.mp3 with your favorite ringtone!
 
@@ -24,4 +26,4 @@ Thanks to Celeste_Chibi for making the ico!
 
 Credits to Kalceto who made the ringtone
 
-(u can find them on youtoube)
+(u can find them on youtoube) 
