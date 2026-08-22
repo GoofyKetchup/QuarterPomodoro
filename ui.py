@@ -157,7 +157,7 @@ def AddAutoCycleButtonToTheWindow(fg_color, text_color, font, button_command):
     global AutoCycleButton
     AutoCycleButton = CTkButton(
         ButtonsContainer3,
-        text="Auto Cycle(not available yet)",
+        text="Auto Cycle(release in v1.2)",
         fg_color=fg_color,
         text_color=text_color,
         font=(font, 20),
