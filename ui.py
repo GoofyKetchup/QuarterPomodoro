@@ -48,19 +48,22 @@ def AddTimerTextToTheWindow(window, fg_color, text_color, font):
         text_color=text_color,
         font=(font, 90),
         width=150,
-        height=230,
+        height=190,
     )
     Timer.pack()
 
 def AddButtonsContainersToTheWindow(window, fg_color):
-    global ButtonsContainer1, ButtonsContainer2
+    global ButtonsContainer1, ButtonsContainer2, ButtonsContainer3
     ButtonsContainer1 = CTkFrame(window, fg_color=fg_color)
     ButtonsContainer1.pack(pady=5)
 
     ButtonsContainer2 = CTkFrame(window, fg_color=fg_color)
     ButtonsContainer2.pack(pady=5)
 
-def AddSetWorkTimerButtonToTheWindow(window, fg_color, text_color, font, button_command):
+    ButtonsContainer3 = CTkFrame(window, fg_color=fg_color)
+    ButtonsContainer3.pack(pady=5)
+
+def AddSetWorkTimerButtonToTheWindow(fg_color, text_color, font, button_command):
     global SetWorkTimerButton
     SetWorkTimerButton = CTkButton(
         ButtonsContainer1,
@@ -75,7 +78,7 @@ def AddSetWorkTimerButtonToTheWindow(window, fg_color, text_color, font, button_
     )
     SetWorkTimerButton.pack(side="left")
 
-def AddSetBreakTimerButtonToTheWindow(window, fg_color, text_color, font, button_command):
+def AddSetBreakTimerButtonToTheWindow(fg_color, text_color, font, button_command):
     global SetBreakTimerButton
     SetBreakTimerButton = CTkButton(
         ButtonsContainer1,
@@ -90,7 +93,7 @@ def AddSetBreakTimerButtonToTheWindow(window, fg_color, text_color, font, button
     )
     SetBreakTimerButton.pack(side="left")
 
-def AddSetFourthBreakTimerButtonToTheWindow(window, fg_color, text_color, font, button_command):
+def AddSetFourthBreakTimerButtonToTheWindow(fg_color, text_color, font, button_command):
     global SetFourthBreakTimerButton
     SetFourthBreakTimerButton = CTkButton(
         ButtonsContainer1,
@@ -105,7 +108,7 @@ def AddSetFourthBreakTimerButtonToTheWindow(window, fg_color, text_color, font, 
     )
     SetFourthBreakTimerButton.pack(side="left")
 
-def AddStartTimerButtonToTheWindow(window, fg_color, text_color, font, button_command):
+def AddStartTimerButtonToTheWindow(fg_color, text_color, font, button_command):
     global StartTimerButton
     StartTimerButton = CTkButton(
         ButtonsContainer2,
@@ -120,7 +123,7 @@ def AddStartTimerButtonToTheWindow(window, fg_color, text_color, font, button_co
     )
     StartTimerButton.pack(side="left", padx=5)
 
-def AddStopTimerButtonToTheWindow(window, fg_color, text_color, font, button_command):
+def AddStopTimerButtonToTheWindow(fg_color, text_color, font, button_command):
     global StopTimerButton
     StopTimerButton = CTkButton(
         ButtonsContainer2,
@@ -135,7 +138,7 @@ def AddStopTimerButtonToTheWindow(window, fg_color, text_color, font, button_com
     )
     StopTimerButton.pack(side="left", padx=5)
 
-def AddStopRingtoneButtonToTheWindow(window, fg_color, text_color, font, button_command):
+def AddStopRingtoneButtonToTheWindow(fg_color, text_color, font, button_command):
     global StopRingtoneButton
     StopRingtoneButton = CTkButton(
         ButtonsContainer2,
@@ -149,6 +152,36 @@ def AddStopRingtoneButtonToTheWindow(window, fg_color, text_color, font, button_
         command=button_command,
     )
     StopRingtoneButton.pack(side="left", padx=5)
+
+def AddAutoCycleButtonToTheWindow(fg_color, text_color, font, button_command):
+    global AutoCycleButton
+    AutoCycleButton = CTkButton(
+        ButtonsContainer3,
+        text="Auto Cycle",
+        fg_color=fg_color,
+        text_color=text_color,
+        font=(font, 20),
+        corner_radius=10,
+        border_width=1.5,
+        border_color="red",
+        command=button_command,
+    )
+    AutoCycleButton.pack(side="left", padx=5)
+
+def AddSettingButtonToTheWindow(fg_color, text_color, font, button_command):
+    global SettingButton
+    SettingButton = CTkButton(
+    ButtonsContainer3,
+    text="Open Settings",
+    fg_color=fg_color,
+    text_color=text_color,
+    font=(font, 20),
+    corner_radius=10,
+    border_width=1.5,
+    border_color="red",
+    command=button_command,
+    )
+    SettingButton.pack(side="left", padx=5)
 
 def RunTheAppRootWindow(root):
     root.mainloop()
